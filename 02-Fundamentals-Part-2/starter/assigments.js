@@ -1,5 +1,6 @@
 const country = 'Croatia';
 const continent = 'Europe';
+const capitolCity = 'Zagreb';
 let population = 4000000;
 console.log(
   'My country is ' +
@@ -47,3 +48,14 @@ console.log(
     population >= 33000000 ? 'above average' : 'below average'
   }`
 );
+
+function describeCountry(country, population, capitalCity) {
+  const description = `${country} has ${population} milion people and its capitol city is ${capitalCity} `;
+  return description;
+}
+
+const croDesc = describeCountry('Hrvatska', 4.5, 'Zagreb');
+const bihDesc = describeCountry('Bosna', 3.5, 'Sarajevo');
+const sloDesc = describeCountry('Slovenija', 2.5, 'Ljubljana');
+
+console.log(croDesc, '\n', sloDesc, '\n', bihDesc);
