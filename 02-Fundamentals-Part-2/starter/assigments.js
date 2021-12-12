@@ -59,3 +59,49 @@ const bihDesc = describeCountry('Bosna', 3.5, 'Sarajevo');
 const sloDesc = describeCountry('Slovenija', 2.5, 'Ljubljana');
 
 console.log(croDesc, '\n', sloDesc, '\n', bihDesc);
+
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
+const percentageCroatia = console.log(percentageOfWorld3(4));
+
+function describePopulation(country, population) {
+  const perc = percentageOfWorld1(population);
+  const description = `${country} has ${population} million people, which is about ${
+    Math.round(perc * 100) / 100
+  }% of world`;
+  return description;
+}
+
+console.log(describePopulation('China', 1441));
+const populations = [4.7, 5.4, 25, 75];
+if (populations.length === 4) {
+  console.log('true');
+} else console.log('false');
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+console.log(percentages);
+
+const myCountry = {
+  country: 'Croatia',
+  capital: 'Zagreb',
+  language: 'Croatian',
+  population: 4,
+  neighbours: ['Italy', 'Bih', 'Serbia'],
+};
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countriues and a capital called ${myCountry.capital}.`
+);
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry.population -= 2;
+console.log(myCountry.population);
