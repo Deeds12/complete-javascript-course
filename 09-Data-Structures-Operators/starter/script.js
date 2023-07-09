@@ -1,5 +1,20 @@
 'use strict';
 
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -7,20 +22,8 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
+  openingHours,
+  
 
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
@@ -46,7 +49,63 @@ const restaurant = {
   },
 };
 
+if(restaurant,openingHours.mon) console.log(restaurant.openingHours.mon.open)
+if(restaurant,openingHours.fri) console.log(restaurant.openingHours.fri.open)
+
+//Optional chaining
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for(const day of days){
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day} we open at ${open}`);
+}
+
+//Method
+console.log(restaurant.ordeasdr?.(0, 1) ?? 'Method does not exist')
+
+//Array
+const user = [{name: "nikola", occup: 'MD'}]
+console.log(user[0]?.name ?? 'User does not exist')
+
+/////112
+/*
+const rest1 = {
+  name: "Marcos",
+  numGuests: 0,
+}
+
+const rest2 = {
+  name: "Luigis",
+  owner: "Luigi",
+}
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+//rest1.owner = rest1.owner && '<ANONYMOUS>';
+//rest2.owner = rest2.owner && '<ANONYMOUS>';
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+*/
+//// 111
+/*console.log(rest1);
+console.log(rest2);
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for(const item of menu) console.log(item)
+
+for(const[i, el] of menu.entries()){
+  console.log(`${i + 1}: ${el}`)
+}
+*/
+
+/* 108
+restaurant.numGuests = 0;
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+
 // Use any data type, return any data type, sort-circuiting
+
 console.log(3 || 'Nikola');
 console.log('' || 'Nikola');
 console.log(true || 0);
@@ -70,6 +129,8 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'tomato');
+
+*/
 /* 107
 // 1 Destructuring
 

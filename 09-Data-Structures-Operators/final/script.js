@@ -861,3 +861,28 @@ console.log(i, j, k);
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
 */
+
+///// 116
+/*const orderSet = new Set(["juha", "jaja", "mlijeko"])
+console.log(orderSet)
+console.log(orderSet.has("juha"))
+console.log(orderSet.has("paradajz"))
+orderSet.add("brasno")
+console.log(orderSet)
+orderSet.delete("juha")
+console.log(orderSet.length)
+for(const order of orderSet) {
+  console.log(order)
+}*/
+
+
+// 117
+
+const rest = new Map();
+rest.set(true, "We are open")
+rest.set(false, "We are closed")
+
+rest.set('open', 11).set('close', 23)
+const time = 15;
+
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')))
