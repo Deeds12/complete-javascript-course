@@ -23,6 +23,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -459,7 +460,7 @@ h4 {
 
 .dots__dot--active {
   /* background-color: #fff; */
-  background-color: #888;
+  background-color: #0c0c0c;
   opacity: 1;
 }
 
