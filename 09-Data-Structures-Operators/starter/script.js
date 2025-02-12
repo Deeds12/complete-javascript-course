@@ -64,13 +64,7 @@ console.log(restaurant.ordeasdr?.(0, 1) ?? 'Method does not exist')
 
 //Array
 const user = [{name: "nikola", occup: 'MD'}]
-console.log(user[1]?.name ?? 'User does not exist')
-var userExist = user[0]?.name ?? 'User does not exist';
-console.log(userExist)
-
-
-
-////// 121
+console.log(user[0]?.name ?? 'User does not exist')
 
 /////112
 /*

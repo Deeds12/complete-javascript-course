@@ -98,7 +98,6 @@ nav {
   transition: all 1s;
 }
 
-
 .balance {
   grid-column: 1 / span 2;
   display: flex;
